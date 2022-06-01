@@ -1,0 +1,16 @@
+{
+    "host": "petuhov.cf",
+    "username": "2582024",
+    "password": "0kzs5z+-",
+    "remotePath": "petuhov.cf",
+    "protocol": "ftp",
+    "port": 21,
+    "fileNameEncoding": "utf8",
+    "autoUpload": true,
+    "autoDelete": true,
+    "autoDownload": true,
+    "ignore": [
+        ".git",
+        "/.vscode"
+    ]
+}

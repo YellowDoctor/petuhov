@@ -1,0 +1,5 @@
+
+
+
+$sql = "UPDATE timer SET timeot='{$_GET["OT"]}', timedo='{$_GET["DO"]}' WHERE 1
+VALUES ('{$_GET["OT"]}', '{$_GET["DO"]}')";

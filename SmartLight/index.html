@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>SmartLight</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/SmartLight/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/SmartLight/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/SmartLight/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/SmartLight/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/SmartLight/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/SmartLight/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/SmartLight/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/SmartLight/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/SmartLight/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/SmartLight/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/SmartLight/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/SmartLight/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/SmartLight/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="/Lamp2.ico">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Caveat:400,700&amp;subset=cyrillic" rel="stylesheet" type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic,latin-ext" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/grayscale.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img src="img/Lamp2.svg" width="40" height="40" class="d-inline-block align-top" alt="">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        МЕНЮ
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">НАСТРОЙКА</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#download">ЭЛЕКТРОЕНЕРГИЯ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">ДЕНЬГИ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Header -->
+  <header class="masthead">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="brand-heading">Smart Light</h1>
+            <p class="intro-text">Wellcome на сайт по управлению вашим умным освещением.
+              <br>Ниже вам будет предложено настроить параметры.</p>
+            <a href="#about" class="btn btn-circle js-scroll-trigger">
+              <i class="fa fa-angle-double-down animated"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Options Section -->
+  <section id="about" class="content-section text-center">
+    <div class="container">
+      <div class="control-group">
+        <form id="Form" v-on:submit.prevent="post">
+          <input v-model="WattsPerHour" min="0" type="number" step="any" class="form-control form-control-lg my-4" placeholder="Стоимость Ватт/час"
+            required="required">
+          <input v-model="LampPowerWatt" min="0" type="number" step="any" class="form-control form-control-lg my-4" placeholder="Мощность лампы Ватт"
+            required="required">
+          <button type="submit" class="btn btn-default btn-lg">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Electro Section 187 line grayscale.css -->
+  <section id="download" class="download-section content-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col mx-auto">
+          <div id="electro" style="height: 370px; width: 100%;"></div>
+        </div>
+        <div class="col-1 text-right mx-auto">
+          <form id="app2" v-on:submit.prevent="Mpicker">
+            <button type="submit"  class="text-center btn btn-default mx-5 my-2">Выбрать</button>
+            <input v-model="Value" type="month" class="month" required="required">
+            <p>{{Value}}</p>
+          </form>
+        </div>
+        <script src="js/canvasjs.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Money Section -->
+  <section id="contact" class="download-section content-section text-center">
+    <div class="container">
+      <div id="money" style="height: 370px; width: 91.441441441441441441441441441441%;"></div>
+      <script src="js/canvasjs.js"></script>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>No Copyright &copy; Our Website 20!8</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/grayscale.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/smart.js"></script>
+
+</body>
+
+</html>
