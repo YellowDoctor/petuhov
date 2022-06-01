@@ -2547,28 +2547,6 @@ fieldset:disabled a.btn {
   border-color: #08a64f;
 }
 
-.btn-stickers_pack:focus, .btn-stickers_pack.focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-
-.btn-primary.disabled, .btn-stickers_pack:disabled {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-stickers_pack:not(:disabled):not(.disabled):active, .btn-stickers_pack:not(:disabled):not(.disabled).active,
-.show > .btn-stickers_pack.dropdown-toggle {
-  color: #fff;
-  background-color: #0062cc;
-  border-color: #005cbf;
-}
-
-.btn-stickers_pack:not(:disabled):not(.disabled):active:focus, .btn-stickers_pack:not(:disabled):not(.disabled).active:focus,
-.show > .btn-stickers_pack.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
-
 .btn-smart_light {
   color: #000000;
   background-color: rgb(226, 185, 1);
