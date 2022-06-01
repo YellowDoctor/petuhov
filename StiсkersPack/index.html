@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script> src = "https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" ></script>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
@@ -61,22 +61,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Options Section -->
-    <section id="about" class="content-section text-center">
-        <div class="container">
-            <div class="control-group">
-                <form id="Form" v-on:submit.prevent="post">
-                    <input v-model="WattsPerHour" min="0" type="number" step="any"
-                        class="form-control form-control-lg my-4" placeholder="Стоимость Ватт/час" required="required">
-                    <input v-model="LampPowerWatt" min="0" type="number" step="any"
-                        class="form-control form-control-lg my-4" placeholder="Мощность лампы Ватт" required="required">
-                    <button type="submit" class="btn btn-default btn-lg">Отправить</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
 </body>
 
 </html>
