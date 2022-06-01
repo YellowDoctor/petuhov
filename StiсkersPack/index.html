@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,11 +8,75 @@
     <meta name="author" content="">
 
     <title>Stickers Pack</title>
-    
+
     <!-- Bootstrap core CSS -->
-    <link href="/petuhov/StiсkersPack/vendor/bootstrap/css/bootstrap.css"  rel="stylesheet">
+    <link href="/petuhov/StiсkersPack/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 </head>
+
 <body>
-    <h2 class="text-center">The Sticker Pack</h2>
+    script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="img/Lamp2.svg" width="40" height="40" class="d-inline-block align-top" alt="">
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                МЕНЮ
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">НАСТРОЙКА</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#download">ЭЛЕКТРОЕНЕРГИЯ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">ДЕНЬГИ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">Smart Light</h1>
+                        <p class="intro-text">Wellcome на сайт по управлению вашим умным освещением.
+                            <br>Ниже вам будет предложено настроить параметры.
+                        </p>
+                        <a href="#about" class="btn btn-circle js-scroll-trigger">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Options Section -->
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <div class="control-group">
+                <form id="Form" v-on:submit.prevent="post">
+                    <input v-model="WattsPerHour" min="0" type="number" step="any"
+                        class="form-control form-control-lg my-4" placeholder="Стоимость Ватт/час" required="required">
+                    <input v-model="LampPowerWatt" min="0" type="number" step="any"
+                        class="form-control form-control-lg my-4" placeholder="Мощность лампы Ватт" required="required">
+                    <button type="submit" class="btn btn-default btn-lg">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
