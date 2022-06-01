@@ -2537,14 +2537,14 @@ fieldset:disabled a.btn {
 
 .btn-stickers_pack {
   color: #000000;
-  background-color: rgb(255, 4, 0);
-  border-color: rgb(255, 4, 0);
+  background-color: #13d613;
+  border-color: #13d613;
 }
 
 .btn-stickers_pack:hover {
   color: #fff;
-  background-color: #b38300;
-  border-color: #b38300;
+  background-color: #0ac25d;
+  border-color: #0ac25d;
 }
 
 .btn-stickers_pack:focus, .btn-stickers_pack.focus {
