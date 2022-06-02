@@ -14,53 +14,55 @@
 </head>
 
 <body>
-    <script src = "https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" ></script>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <header class="p-3 mb-3 border-bottom">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <img src="img/Lamp2.svg" width="40" height="40" class="d-inline-block align-top" alt="">
-            </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                МЕНЮ
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">НАСТРОЙКА</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#download">ЭЛЕКТРОЕНЕРГИЯ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#contact">ДЕНЬГИ</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="https://getbootstrap.com/"
+                    class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
 
-    <!-- Intro Header -->
-    <header class="masthead">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">Smart Light</h1>
-                        <p class="intro-text">Wellcome на сайт по управлению вашим умным освещением.
-                            <br>Ниже вам будет предложено настроить параметры.
-                        </p>
-                        <a href="#about" class="btn btn-circle js-scroll-trigger">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
-                    </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="https://getbootstrap.com/docs/5.0/examples/headers/#"
+                            class="nav-link px-2 link-secondary">Overview</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.0/examples/headers/#"
+                            class="nav-link px-2 link-dark">Inventory</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.0/examples/headers/#"
+                            class="nav-link px-2 link-dark">Customers</a></li>
+                    <li><a href="https://getbootstrap.com/docs/5.0/examples/headers/#"
+                            class="nav-link px-2 link-dark">Products</a></li>
+                </ul>
+
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search"
+                        spellcheck="false" data-ms-editor="true">
+                </form>
+
+                <div class="dropdown text-end">
+                    <a href="https://getbootstrap.com/docs/5.0/examples/headers/#"
+                        class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./Headers · Bootstrap v5.0_files/mdo.png" alt="mdo" width="32" height="32"
+                            class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1" style="">
+                        <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/examples/headers/#">New
+                                project...</a></li>
+                        <li><a class="dropdown-item"
+                                href="https://getbootstrap.com/docs/5.0/examples/headers/#">Settings</a></li>
+                        <li><a class="dropdown-item"
+                                href="https://getbootstrap.com/docs/5.0/examples/headers/#">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="https://getbootstrap.com/docs/5.0/examples/headers/#">Sign
+                                out</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
-</body>
 
 </html>
