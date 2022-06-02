@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Montserrat;
 }
 
 .header {
@@ -54,6 +54,3 @@ body {
         max-width: 100%;
     }
 }
-.norm-sriftu {
-    font-family: Montserrat;
-  }
